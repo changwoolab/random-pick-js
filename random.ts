@@ -8,25 +8,30 @@ export function randomPick<T>(array: Array<T>, { cnt = 1, weights = undefined }:
     if (cnt > array.length) throw new Error('cnt is larger than list length');
     if (weights && array.length !== weights.length) throw new Error('list length and weights length must be same');
 
-    let list = [...array];
+
+    let copiedArray = [...array];
+    let copiedWeights = weights ? [...weights] : undefined;
+
 
     const result: T[] = []
     while (cnt--) {
         let picked: number;
-        if (weights) {
+        if (copiedWeights) {
             const probability = Math.random()
             let weightedProbability = 0;
-            for (let i = 0; i < weights.length; i++) weightedProbability += probability * weights[i];
+            for (let i = 0; i < copiedWeights.length; i++) {
+                weightedProbability += probability * copiedWeights[i];
+            }
 
-            for (picked = 0; picked < weights.length; picked++) {
-                weightedProbability -= weights[picked];
+            for (picked = 0; picked < copiedWeights.length; picked++) {
+                weightedProbability -= copiedWeights[picked];
                 if (weightedProbability < 0) break;
             }
-            weights.splice(picked, 1);
+            copiedWeights.splice(picked, 1);
         } else {
-            picked = Math.floor(Math.random() * list.length);
+            picked = Math.floor(Math.random() * copiedArray.length);
         }
-        result.push(list.splice(picked, 1)[0]);
+        result.push(copiedArray.splice(picked, 1)[0]);
     }
     return result;
 }
