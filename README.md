@@ -18,5 +18,5 @@ const picked = randomPick(['icecream', 'cookie', 'anything', 'chicken', 'pizza']
 	weights: [1, 3, 10, 2, 7]
 });
 
-console.log(picked);
+console.log(picked); // example output: ['anything', 'chicken']
 ```
