@@ -3,13 +3,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.randomPick = void 0;
 class Options {
 }
-function randomPick(list, { cnt = 1, weights = undefined } = {}) {
-    if (list.length < 1)
+function randomPick(array, { cnt = 1, weights = undefined } = {}) {
+    if (array.length < 1)
         throw new Error('no elements to pick');
-    if (cnt > list.length)
+    if (cnt > array.length)
         throw new Error('cnt is larger than list length');
-    if (weights && list.length !== weights.length)
+    if (weights && array.length !== weights.length)
         throw new Error('list length and weights length must be same');
+    let list = [...array];
     const result = [];
     while (cnt--) {
         let picked;

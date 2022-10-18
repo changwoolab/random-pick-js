@@ -3,10 +3,12 @@ class Options {
     weights?: number[];
 }
 
-export function randomPick<T>(list: Array<T>, { cnt = 1, weights = undefined }: Options = {}): Array<T> {
-    if (list.length < 1) throw new Error('no elements to pick');
-    if (cnt > list.length) throw new Error('cnt is larger than list length');
-    if (weights && list.length !== weights.length) throw new Error('list length and weights length must be same');
+export function randomPick<T>(array: Array<T>, { cnt = 1, weights = undefined }: Options = {}): Array<T> {
+    if (array.length < 1) throw new Error('no elements to pick');
+    if (cnt > array.length) throw new Error('cnt is larger than list length');
+    if (weights && array.length !== weights.length) throw new Error('list length and weights length must be same');
+
+    let list = [...array];
 
     const result: T[] = []
     while (cnt--) {

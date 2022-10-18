@@ -1,6 +1,6 @@
 {
   "name": "random-pick-js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Pick random items from an array within given weights",
   "main": "index.js",
   "scripts": {
