@@ -1,6 +1,6 @@
 {
   "name": "random-pick-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Pick random items from an array within given weights",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,6 @@
     "random.d.ts"
   ],
   "author": "changwoolab <cwyoo01@naver.com>",
-  "repository": "https://github.com/changwoolab/random-pick",
+  "repository": "https://github.com/changwoolab/random-pick-js",
   "license": "MIT"
 }
