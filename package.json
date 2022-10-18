@@ -1,0 +1,33 @@
+{
+  "name": "random-pick-js",
+  "version": "1.0.0",
+  "description": "Pick random items from an array within given weights",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "random",
+    "array",
+    "pick",
+    "list",
+    "weight",
+    "pick-random",
+    "random-pick",
+    "decision",
+    "winner",
+    "picking",
+    "choosing",
+    "choose",
+    "item"
+  ],
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "random.js",
+    "random.d.ts"
+  ],
+  "author": "changwoolab <cwyoo01@naver.com>",
+  "repository": "https://github.com/changwoolab/random-pick",
+  "license": "MIT"
+}
