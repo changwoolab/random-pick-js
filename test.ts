@@ -1,18 +1,11 @@
-import randomPick from "./random";
+import { randomPick } from './index';
 
-const toPick: string[] = []
-for (let i = 0; i < 10; i++) {
-    toPick.push(String.fromCharCode('a'.charCodeAt(0)+i));
-}
+const picked = randomPick(
+  ['icecream', 'cookie', 'anything', 'chicken', 'pizza'],
+  {
+    cnt: 2,
+    weights: [1, 3, 10, 2, 7],
+  }
+);
 
-const weights: number[] = []
-for (let i = 10; i > 0; i--) {
-    weights.push(i);
-}
-
-const picked = randomPick(toPick, {
-  cnt: 3,
-  weights,
-});
-
-console.log(picked)
+console.log(picked);

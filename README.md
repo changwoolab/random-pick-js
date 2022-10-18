@@ -11,7 +11,7 @@ npm i random-pick-js
 ## Usage
 
 ```tsx
-import randomPick from 'random-pick-js'
+import { randomPick } from 'random-pick-js'
 
 const picked = randomPick(['icecream', 'cookie', 'anything', 'chicken', 'pizza'], { 
 	cnt: 2,

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.randomPick = void 0;
 class Options {
 }
 function randomPick(list, { cnt = 1, weights = undefined } = {}) {
@@ -31,4 +32,4 @@ function randomPick(list, { cnt = 1, weights = undefined } = {}) {
     }
     return result;
 }
-exports.default = randomPick;
+exports.randomPick = randomPick;
